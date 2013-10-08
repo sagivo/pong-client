@@ -24,7 +24,7 @@ public class Gui : MonoBehaviour {
 			GUI.Button (new Rect(10,10,150,100), "Connecting");
 		break;	
 		case Game.GameStateType.ConnectedToServer: 
-			GUI.Button (new Rect(10,10,150,100), "Player id: " + Game.Instance.ClientId);
+			GUI.Button (new Rect(10,10,150,100), "Connected");
 		break;
 		default:
 		break;

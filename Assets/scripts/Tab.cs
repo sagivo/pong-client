@@ -13,7 +13,7 @@ public class Tab : MonoBehaviour {
 	void Update () {
 		//move
 		if (gameObject.tag == "Player") transform.Translate(Speed * Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal"));			
-		else if (gameObject.tag == "Computer") followBall();
+		//else if (gameObject.tag == "Computer") followBall();
     }	
 	
 	void OnCollisionEnter( Collision col ) {

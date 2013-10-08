@@ -10,17 +10,18 @@ public class Ball : MonoBehaviour {
 	float maxForce = 300;
 	// Use this for initializationעשצק
 	void Start () {
-		Game.AddBall(this.gameObject);		
+		Game.AddBall(this.gameObject);
+		LastTouched = AttachedTo;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (AttachedTo) 
+		if (AttachedTo && Game.Instance.Player1.tag == "Player") 
 		{			
 			transform.position = AttachedTo.transform.position + new Vector3(0, (AttachedTo.GetComponent<Tab>() != null) ? .8f : -.8f,0);			
 			if (Input.GetKeyDown( KeyCode.Space) ){
 				AttachedTo = null;				
-				AddForce(BallSpeed * Input.GetAxis( "Horizontal" ), BallSpeed);
+				AddForce(BallSpeed * Input.GetAxis( "Horizontal" ), BallSpeed);				
 			}
 		}
 	}

@@ -15,7 +15,7 @@ public static class Network : object {
 	public static ServerConnectDel ServerConnect;
 	public delegate void ServerDisonnectDel();
 	public static ServerDisonnectDel ServerDisonnect;
-	public delegate void ServerErrorDel(object sender, System.EventArgs e);
+	public delegate void ServerErrorDel();
 	public static ServerErrorDel ServerError;
 	public delegate void ServerMsgDel(NetworkMsg msg);
 	public static ServerMsgDel ServerMsg;
@@ -46,14 +46,13 @@ public static class Network : object {
 		};
         
         ws.OnError += delegate(object sender, ErrorEventArgs e) {
-			Debug.Log("error: " + e.Message);       
+			Debug.Log("error: " + e.Message);
+			if (ServerError!=null) ServerError();
         };
 
         ws.OnClose += delegate(object sender, CloseEventArgs e) {				        	
 			Debug.Log("connection closed: " + e.Data);
-			Loom.QueueOnMainThread(()=>{ 
-				Application.LoadLevel("lvl1");
-			});
+			if (ServerDisonnect!=null) ServerDisonnect();			
         };
 		
 		ws.OnOpen+= delegate(object sender, System.EventArgs e) {			

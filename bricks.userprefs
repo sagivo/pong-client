@@ -1,11 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Game.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Enemy.cs">
     <Files>
-      <File FileName="Assets/scripts/Game.cs" Line="49" Column="3" />
-      <File FileName="Assets/scripts/Tab.cs" Line="29" Column="1" />
-      <File FileName="Assets/scripts/Enemy.cs" Line="25" Column="1" />
-      <File FileName="Assets/scripts/Ball.cs" Line="13" Column="8" />
+      <File FileName="Assets/scripts/Game.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Tab.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Gui.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Network.cs" Line="49" Column="1" />
+      <File FileName="Assets/scripts/Ball.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/UnityThreading/Loom.cs" Line="71" Column="18" />
+      <File FileName="Assets/scripts/Enemy.cs" Line="26" Column="4" />
+      <File FileName="Assets/scripts/Brick.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +18,7 @@
             <Node name="Assets" expanded="True">
               <Node name="scripts" expanded="True">
                 <Node name="UnityThreading" expanded="True" />
-                <Node name="Game.cs" selected="True" />
+                <Node name="Enemy.cs" selected="True" />
               </Node>
             </Node>
           </Node>
